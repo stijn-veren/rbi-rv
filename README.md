@@ -1,3 +1,16 @@
+# React Interface
+
+## Learning Project
+
+**React.js: Building an Interface by Ray Villalobos:** https://www.linkedin.com/learning/react-js-building-an-interface-8551484 \
+**Projects List:** https://github.com/stijn-veren/projects-list
+
+## Resources
+
+...
+
+---
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
