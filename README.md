@@ -7,7 +7,11 @@
 
 ## Resources
 
-...
+React Icons: https://www.npmjs.com/package/react-icons
+
+Tailwind CSS:
+* https://www.npmjs.com/package/tailwindcss
+* https://tailwindcss.com
 
 ---
 
