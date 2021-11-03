@@ -10,7 +10,7 @@ function App() {
   let [sortBy, setSortBy] = useState('petName')
   let [orderBy, setOrderBy] = useState('asc')
 
-  const fileteredAppointments = appointmentList
+  const filteredAppointments = appointmentList
     .filter((item) => {
       return (
         item.petName.toLowerCase().includes(query.toLowerCase()) ||
@@ -28,7 +28,9 @@ function App() {
   const fetchData = useCallback(() => {
     fetch('./data.json')
       .then((response) => response.json())
-      .then((data) => setAppointmentList(data))
+      .then((data) => {
+        setAppointmentList(data)
+      })
   }, [])
 
   useEffect(() => {
@@ -37,24 +39,30 @@ function App() {
 
   return (
     <div className="App container mx-auto mt-3 font-thin">
-      <h1 className="text-5xl">
+      <h1 className="text-5xl mb-3">
         <BiCalendar className="inline-block text-red-400 align-top" />
         Your Appointments
       </h1>
-
-      <AddAppointment />
-
+      <AddAppointment
+        onSendAppointment={(myAppointment) =>
+          setAppointmentList([...appointmentList, myAppointment])
+        }
+        lastId={appointmentList.reduce(
+          (max, item) => (Number(item.id) > max ? Number(item.id) : max),
+          0
+        )}
+      />
       <Search
         query={query}
         onQueryChange={(myQuery) => setQuery(myQuery)}
         orderBy={orderBy}
-        onOrderByChange={(myOrder) => setOrderBy(myOrder)}
+        onOrderByChange={(mySort) => setOrderBy(mySort)}
         sortBy={sortBy}
-        onSortByChange={(mySort) => setOrderBy(mySort)}
+        onSortByChange={(mySort) => setSortBy(mySort)}
       />
 
       <ul className="divide-y divide-gray-200">
-        {fileteredAppointments.map((appointment) => (
+        {filteredAppointments.map((appointment) => (
           <AppointmentInfo
             key={appointment.id}
             appointment={appointment}
