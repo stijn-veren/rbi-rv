@@ -7,6 +7,8 @@
 
 ## Resources
 
+Exercise files: https://github.com/LinkedInLearning/react-interface-2880067
+
 React Icons: https://www.npmjs.com/package/react-icons
 
 Tailwind CSS:
