@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { BiSearch, BiCaretDown } from 'react-icons/bi'
 import DropDown from './DropDown'
 
-const Search = () => {
+const Search = ({ query, onQueryChange }) => {
   let [toggleSort, setToggleSort] = useState(false)
 
   return (
@@ -17,9 +17,12 @@ const Search = () => {
           type="text"
           name="query"
           id="query"
-          value=""
+          value={query}
           placeholder="Search"
           aria-label="Search"
+          onChange={(event) => {
+            onQueryChange(event.target.value)
+          }}
         />
         <div className="absolute inset-y-0 right-0 flex items-center">
           <div>
