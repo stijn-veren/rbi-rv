@@ -1,4 +1,4 @@
-# Star DB App
+# React Interface
 
 ## Learning Project
 
