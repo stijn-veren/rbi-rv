@@ -1,22 +1,3 @@
-# React Interface
-
-## Learning Project
-
-**React.js: Building an Interface by Ray Villalobos:** https://www.linkedin.com/learning/react-js-building-an-interface-8551484 \
-**Projects List:** https://github.com/stijn-veren/projects-list
-
-## Resources
-
-Exercise files: https://github.com/LinkedInLearning/react-interface-2880067
-
-React Icons: https://www.npmjs.com/package/react-icons
-
-Tailwind CSS:
-* https://www.npmjs.com/package/tailwindcss
-* https://tailwindcss.com
-
----
-
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
